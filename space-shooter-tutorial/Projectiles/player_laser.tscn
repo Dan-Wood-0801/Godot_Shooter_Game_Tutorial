@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://20vniw4kb3u6"]
+
+[ext_resource type="Script" uid="uid://bhkyf3eexey1t" path="res://Projectiles/player_laser.gd" id="1_aknpy"]
+[ext_resource type="Texture2D" uid="uid://k4cpbyl10iqr" path="res://Assets/laserBlue01.png" id="1_fdv57"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aknpy"]
+radius = 5.0
+height = 54.0
+
+[node name="PlayerLaser" type="Area2D" unique_id=2107692766]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_aknpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2073048924]
+texture = ExtResource("1_fdv57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1012822864]
+shape = SubResource("CapsuleShape2D_aknpy")
+
+[connection signal="area_entered" from="." to="." method="_on_PlayerLaser_area_entered"]

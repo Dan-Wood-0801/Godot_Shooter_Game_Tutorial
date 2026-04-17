@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bu2vsb3jnnnl0"]
+
+[ext_resource type="Script" uid="uid://cj66nhj7jxub3" path="res://world.gd" id="1_036b0"]
+[ext_resource type="Texture2D" uid="uid://8ay3e2eq4i4g" path="res://Assets/darkPurple.png" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://cdu5634abc5wh" path="res://player_2.tscn" id="2_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://chr81pryiro02" path="res://EnemySpawner.tscn" id="6_pkg7o"]
+
+[node name="World" type="Node2D" unique_id=924226701]
+script = ExtResource("1_036b0")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1630361140]
+
+[node name="DarkPurple" type="Sprite2D" parent="." unique_id=1606009125]
+texture_repeat = 2
+position = Vector2(537.27026, -0.9218025)
+scale = Vector2(-2.1026182, 3.73153)
+texture = ExtResource("1_aqk2v")
+centered = false
+
+[node name="EnemySPawner" parent="." unique_id=385718251 instance=ExtResource("6_pkg7o")]
+
+[node name="Player" parent="." unique_id=1345122820 instance=ExtResource("2_aqk2v")]
+position = Vector2(259, 902)
+
+[connection signal="spawn_laser" from="Player" to="." method="_on_player_spawn_laser"]

@@ -10,16 +10,10 @@ script = ExtResource("1_tlwx7")
 [node name="Pos1" type="Marker2D" parent="Positions" unique_id=873756806]
 position = Vector2(75, 0)
 
-[node name="Pos2" type="Marker2D" parent="Positions" unique_id=1922550623]
-position = Vector2(175, 0)
-
-[node name="Pos3" type="Marker2D" parent="Positions" unique_id=1852543482]
+[node name="Pos2" type="Marker2D" parent="Positions" unique_id=1852543482]
 position = Vector2(275, 0)
 
-[node name="Pos4" type="Marker2D" parent="Positions" unique_id=378196482]
-position = Vector2(375, 0)
-
-[node name="Pos5" type="Marker2D" parent="Positions" unique_id=1313709147]
+[node name="Pos3" type="Marker2D" parent="Positions" unique_id=1313709147]
 position = Vector2(475, 0)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=420625446]

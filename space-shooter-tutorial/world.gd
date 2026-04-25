@@ -1,5 +1,6 @@
 extends Node2D
-var Laser = preload("res://player_2.tscn")
+var PlayerLaser = preload("res://Projectiles/player_laser.tscn")
+var EnemyLaser = preload("res://Enemy_Laser.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,11 @@ func _process(delta: float) -> void:
 
 
 func _on_player_spawn_laser(location):
-	var l = Laser.instance()
-	l.global_position = location
-	add_child(l)
+	var pl = PlayerLaser.instantiate()
+	pl.global_position = location
+	add_child(pl)
+
+func _on_enemy_spawn_laser(location):
+	var el = EnemyLaser.instantiate()
+	el.global_position = location
+	add_child(el)

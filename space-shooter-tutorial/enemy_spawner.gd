@@ -14,8 +14,5 @@ func spawn_enemy():
 	enemy.global_position = spawn_positions[index].global_position
 	add_child(enemy)
 
-
-
-
 func _on_spawn_timer_timeout():
 	spawn_enemy()

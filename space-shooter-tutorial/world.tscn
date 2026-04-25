@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cj66nhj7jxub3" path="res://world.gd" id="1_036b0"]
 [ext_resource type="Texture2D" uid="uid://8ay3e2eq4i4g" path="res://Assets/darkPurple.png" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://cdu5634abc5wh" path="res://player_2.tscn" id="2_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://cye7lnv3k2emf" path="res://enemy.tscn" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://chr81pryiro02" path="res://EnemySpawner.tscn" id="6_pkg7o"]
 
 [node name="World" type="Node2D" unique_id=924226701]
@@ -21,5 +22,7 @@ centered = false
 
 [node name="Player" parent="." unique_id=1345122820 instance=ExtResource("2_aqk2v")]
 position = Vector2(259, 902)
+
+[node name="Enemy" parent="." unique_id=1023171662 instance=ExtResource("5_036b0")]
 
 [connection signal="spawn_laser" from="Player" to="." method="_on_player_spawn_laser"]

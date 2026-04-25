@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bjt0vxtwido7d"]
+
+[ext_resource type="Script" uid="uid://bpjxecd1k5xhu" path="res://enemy_laser.gd" id="1_kub2n"]
+[ext_resource type="Texture2D" uid="uid://b3wi4v20x2bwp" path="res://Assets/laserRed05.png" id="2_tk35n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2ux1"]
+radius = 4.0
+
+[node name="EnemyLaser" type="Area2D" unique_id=344526744]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_kub2n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2116672274]
+position = Vector2(0, 1.0728836e-06)
+scale = Vector2(1, 0.81081086)
+texture = ExtResource("2_tk35n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1129722875]
+shape = SubResource("CapsuleShape2D_f2ux1")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
